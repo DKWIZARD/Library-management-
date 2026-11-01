@@ -1,0 +1,99 @@
+/* QR scanner styles — all selectors are scoped to the QR page/modal
+   to protect the existing Leaf & Ledger interface. */
+#qr-scanner .hidden{display:none!important}
+#qr-scanner .qr-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:18px;align-items:start}
+#qr-scanner .qr-column{min-width:0;display:grid;gap:18px}
+#qr-scanner .qr-panel{margin:0}
+#qr-scanner .qr-live{font-size:9px;letter-spacing:1px;font-weight:700;color:var(--green2);background:#eaf4e9;border-radius:30px;padding:7px 10px;white-space:nowrap}
+#qr-scanner .qr-live i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#4e9b61;margin-right:5px}
+#qr-scanner .qr-camera-frame{margin:0 22px;background:#f0f4ef;border:1px dashed #cbd8ca;border-radius:13px;min-height:225px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#qr-scanner #reader{width:100%;max-width:100%;border:0!important}
+#qr-scanner #reader video{object-fit:cover;border-radius:10px}
+#qr-scanner #reader__dashboard{padding:8px!important}
+#qr-scanner #reader__dashboard_section_csr button{border:0!important;border-radius:8px!important;background:var(--green)!important;color:#fff!important;padding:8px 11px!important}
+#qr-scanner #reader__dashboard_section_swaplink{color:var(--green2)!important}
+#qr-scanner .qr-camera-placeholder{text-align:center;padding:24px;position:absolute;inset:0;display:grid;align-content:center;justify-items:center;pointer-events:none}
+#qr-scanner .qr-camera-symbol{width:54px;height:54px;border-radius:16px;background:#dfeadd;color:var(--green);display:grid;place-items:center;font-size:27px;margin-bottom:11px}
+#qr-scanner .qr-camera-placeholder strong{font-size:13px}
+#qr-scanner .qr-camera-placeholder p{font-size:11px;color:var(--muted);margin:6px 0 0}
+#qr-scanner .qr-controls{display:flex;gap:8px;padding:13px 22px 17px}
+#qr-scanner .qr-controls .btn:disabled,#qr-scanner .qr-action-buttons .btn:disabled{opacity:.45;cursor:not-allowed}
+#qr-scanner .qr-divider{height:1px;background:var(--line);margin:0 22px}
+#qr-scanner .qr-manual-form{padding:15px 22px 0}
+#qr-scanner .qr-manual-form label,#qr-scanner .qr-action-row label{display:block;font-size:9px;letter-spacing:1.2px;font-weight:700;color:#77847b;margin-bottom:8px}
+#qr-scanner .qr-manual-row{display:flex;gap:8px}
+#qr-scanner .qr-manual-row input,#qr-scanner .qr-inventory-tools input,#qr-scanner .qr-action-row input,#qr-scanner .qr-action-row select{min-width:0;border:1px solid var(--line);border-radius:9px;padding:10px 11px;outline:none;background:#fbfcfa;font-size:11px;width:100%}
+#qr-scanner .qr-manual-row input{flex:1}
+#qr-scanner .qr-manual-row input:focus,#qr-scanner .qr-inventory-tools input:focus,#qr-scanner .qr-action-row input:focus,#qr-scanner .qr-action-row select:focus{border-color:#91b39a;box-shadow:0 0 0 3px #dcebdd}
+#qr-scanner .qr-helper{font-size:10px;color:#8b968e;line-height:1.5;padding:0 22px;margin:10px 0 17px}
+#qr-scanner .qr-inventory-tools{padding:0 22px 13px}
+#qr-scanner .qr-inventory-tools input{max-width:330px}
+#qr-scanner .qr-table-scroll{overflow-x:auto}
+#qr-scanner .qr-table-scroll table{width:100%;border-collapse:collapse;white-space:nowrap}
+#qr-scanner .qr-table-scroll th{text-align:left;color:#8b968e;font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;padding:12px;border-bottom:1px solid var(--line)}
+#qr-scanner .qr-table-scroll td{padding:12px;border-bottom:1px solid #eff1ed;font-size:11px}
+#qr-scanner .qr-table-scroll tbody tr:last-child td{border-bottom:0}
+#qr-scanner .qr-book-author{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+#qr-scanner .qr-table-scroll code{font-family:monospace;color:#59685f;font-size:10px}
+#qr-scanner .qr-status-badge{display:inline-flex;border-radius:30px;padding:5px 8px;font-size:9px;font-weight:700}
+#qr-scanner .qr-status-badge.available{background:#e8f4e9;color:#38744d}
+#qr-scanner .qr-status-badge.issued{background:#fff0df;color:#a76b2e}
+#qr-scanner .qr-status-badge.overdue{background:#fbe8e6;color:#b24c43}
+#qr-scanner .qr-link{border:0;background:#eff4ec;color:var(--green);padding:6px 8px;border-radius:7px;font-size:10px;font-weight:700}
+#qr-scanner .qr-empty-result{text-align:center;padding:40px 26px 48px}
+#qr-scanner .qr-empty-result>div{font-size:39px;margin-bottom:13px}
+#qr-scanner .qr-empty-result strong{font-size:13px}
+#qr-scanner .qr-empty-result p{font-size:11px;color:var(--muted);line-height:1.6;max-width:260px;margin:7px auto 0}
+#qr-scanner .qr-book-result{padding:0 20px 18px}
+#qr-scanner .qr-result-top{display:flex;align-items:center;gap:14px;padding:7px 0 17px}
+#qr-scanner .qr-book-cover{width:61px;height:78px;border-radius:7px;background:#dce9d4;display:grid;place-items:center;font-size:29px;flex-shrink:0}
+#qr-scanner .qr-result-top small{font-size:9px;color:var(--green2);font-weight:700;letter-spacing:1px}
+#qr-scanner .qr-result-top h3{font-family:'Playfair Display',serif;font-size:20px;margin:5px 0 4px}
+#qr-scanner .qr-result-top p{font-size:11px;color:var(--muted);margin:0}
+#qr-scanner .qr-detail-list{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:5px 0}
+#qr-scanner .qr-detail-list>div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;font-size:11px}
+#qr-scanner .qr-detail-list span{color:var(--muted)}
+#qr-scanner .qr-detail-list strong{font-weight:600;text-align:right}
+#qr-scanner .qr-status.available{color:var(--green2)}
+#qr-scanner .qr-status.issued{color:#a76b2e}
+#qr-scanner .qr-status.overdue{color:#b24c43}
+#qr-scanner .qr-action-area{padding-top:15px}
+#qr-scanner .qr-action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#qr-scanner .qr-action-buttons{display:flex;gap:8px;margin-top:9px}
+#qr-scanner .qr-action-buttons .btn{flex:1}
+#qr-scanner #actionHint{font-size:10px;color:var(--muted);margin:9px 0 0;line-height:1.5}
+#qr-scanner .qr-history-list{padding:0 19px 16px;display:grid;gap:14px}
+#qr-scanner .qr-history-item{display:flex;gap:10px;align-items:flex-start}
+#qr-scanner .qr-history-icon{width:30px;height:30px;border-radius:10px;background:#edf3e9;display:grid;place-items:center;color:var(--green);flex-shrink:0}
+#qr-scanner .qr-history-item strong{font-size:11px;display:block;line-height:1.4}
+#qr-scanner .qr-history-item p{font-size:10px;color:var(--muted);margin:3px 0}
+#qr-scanner .qr-history-item time{font-size:9px;color:#9aa49d}
+#qr-scanner .qr-no-history{text-align:center;padding:20px;color:var(--muted);font-size:11px}
+.qr-modal-backdrop{position:fixed;inset:0;background:#14251dc4;z-index:40;display:none;align-items:center;justify-content:center;padding:18px}
+.qr-modal-backdrop.open{display:flex}
+.qr-modal-card{position:relative;background:white;border-radius:18px;padding:27px;width:min(100%,370px);text-align:center;box-shadow:0 25px 80px #0003}
+.qr-modal-close{position:absolute;right:13px;top:11px;border:0;background:#f0f3ee;width:30px;height:30px;border-radius:8px;font-size:19px;color:var(--ink)}
+.qr-modal-card h2{font-family:"Playfair Display",serif;font-size:23px;margin:7px 0}
+.qr-modal-subtitle,.qr-modal-help{font-size:11px;color:var(--muted);margin:0}
+.qr-output{display:flex;justify-content:center;align-items:center;padding:20px 0;min-height:225px}
+.qr-output img,.qr-output canvas{margin:auto!important}
+.qr-print-btn{width:100%}
+@media(max-width:900px){#qr-scanner .qr-layout{grid-template-columns:1fr}}
+@media(max-width:720px){
+  #qr-scanner .qr-camera-frame{margin:0 14px;min-height:205px}
+  #qr-scanner .qr-controls{padding:12px 14px}
+  #qr-scanner .qr-manual-form{padding:13px 14px 0}
+  #qr-scanner .qr-helper{padding:0 14px}
+  #qr-scanner .qr-divider{margin:0 14px}
+  #qr-scanner .qr-book-result{padding:0 15px 16px}
+  #qr-scanner .qr-empty-result{padding:32px 20px}
+  #qr-scanner .qr-inventory-tools{padding:0 14px 12px}
+  #qr-scanner .qr-action-row{grid-template-columns:1fr}
+}
+@media print{
+  body *{visibility:hidden!important}
+  .qr-modal-card,.qr-modal-card *{visibility:visible!important}
+  .qr-modal-card{position:absolute;left:0;top:0;width:100%;box-shadow:none}
+  .qr-modal-close,.qr-modal-help,.qr-print-btn{display:none!important}
+  .qr-modal-backdrop{display:block!important;background:white;position:absolute}
+}
